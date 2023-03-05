@@ -31,11 +31,11 @@ def compute_height(n, parents):
 def main():
     
     # implement input form keyboard and from files
-    text = input("Input from keyboard or from files: ")
-    if "k" in text:
+    text = input("I or F: ")
+    if "I" in text:
        n = int(input())
        parents = list(map(int, input().split()))
-    elif "f" in text:
+    elif "F" in text:
         f = input()
         test ='./test/'
         file = test+f
