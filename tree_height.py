@@ -1,13 +1,9 @@
-# 221RDB186 Darina Stegailo 7.grupa
 # python3
-
 import sys
 import threading
 import numpy
 
 def compute_height(n, parents):
-    
-    # Write this function
     h = n*[-1]
     
     def height(node):
@@ -21,7 +17,6 @@ def compute_height(n, parents):
    
     max_height = 0
     
-    # Your code here
     for root in range(n):
         max_height = max(max_height,height(root))
         
@@ -29,8 +24,6 @@ def compute_height(n, parents):
 
 
 def main():
-    
-    # implement input form keyboard and from files
     text = input("Input from keyboard or from files: ")
     if "k" in text:
        n = int(input())
@@ -39,8 +32,6 @@ def main():
         file = input()
         test ='./test/'
         file = test+file
-        
-        # let user input file name to use, don't allow file names with letter a
         if "a" not in file:
             try:
                 with open(file) as x:
@@ -49,14 +40,10 @@ def main():
             except Exception as y:
                 print("Error",str(y))
                 return
-            
-        # account for github input inprecision
-        # input number of elements
-        # input values in one variable, separate with space, split these values in an array
         else:
             print("Error")
             return    
-    # call the function and output it's result
+        
     print(compute_height(n,parents))    
     
 # In Python, the default limit on recursion depth is rather low,
